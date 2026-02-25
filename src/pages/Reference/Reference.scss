@@ -1,0 +1,119 @@
+@import '../../styles/variables';
+
+.reference-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+
+  .page-intro {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h1.ant-typography {
+      color: $deep-brown;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .intro-subtitle {
+      font-size: 1.1rem;
+      color: rgba($deep-brown, 0.75);
+    }
+  }
+
+  // Explanation box - quote style
+  .explanation-box {
+    text-align: center;
+    background: linear-gradient(135deg, rgba($light-orange, 0.15), rgba($brand-orange, 0.08));
+    border-left: 4px solid $brand-orange;
+    border-radius: 8px;
+    padding: 24px 32px;
+    margin-bottom: 40px;
+
+    h3.ant-typography {
+      color: $brand-orange;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .ant-typography {
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+  }
+
+  // Resource cards
+  .resource-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .resource-card {
+    border: 1px solid rgba($light-orange, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-header {
+      border-bottom: 2px solid $light-orange;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+
+      h4.ant-typography {
+        color: $deep-brown;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+
+    .ant-typography {
+      line-height: 1.7;
+      color: rgba($deep-brown, 0.85);
+    }
+
+    .action-btn {
+      display: block;
+      text-align: center;
+      padding: 12px 24px;
+      background: $milk-white;
+      border: 2px solid $deep-brown;
+      border-radius: 8px;
+      color: $deep-brown;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: all 0.3s ease;
+
+      .anticon {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background: $deep-brown;
+        color: $milk-white;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .reference-page {
+    padding: 24px 16px 40px;
+
+    .page-intro h1.ant-typography {
+      font-size: 1.5rem;
+    }
+
+    .explanation-box {
+      padding: 20px;
+    }
+  }
+}
