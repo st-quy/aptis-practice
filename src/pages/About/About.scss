@@ -1,0 +1,136 @@
+@import '../../styles/variables';
+
+.about-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+
+  .page-intro {
+    text-align: center;
+    margin-bottom: 48px;
+
+    h1.ant-typography {
+      color: $deep-brown;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .intro-subtitle {
+      font-size: 1.1rem;
+      color: rgba($deep-brown, 0.75);
+    }
+  }
+
+  .about-content {
+    .section {
+      margin-bottom: 48px;
+
+      h2.ant-typography {
+        color: $deep-brown;
+        font-weight: 700;
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $light-orange;
+      }
+
+      > .ant-typography {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+    }
+
+    // Grid layout for image + text sections
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin: 32px 0;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba($light-orange, 0.5);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.reverse {
+        .about-text {
+          order: 2;
+        }
+        .about-image-container {
+          order: 1;
+        }
+      }
+
+      .about-text {
+        h4.ant-typography {
+          color: $deep-brown;
+          font-weight: 600;
+          margin-bottom: 12px;
+        }
+
+        .ant-typography {
+          line-height: 1.8;
+        }
+
+        ul {
+          padding-left: 20px;
+          margin: 8px 0;
+
+          li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+          }
+        }
+
+        code {
+          background: $light-orange;
+          color: $deep-brown;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 0.9em;
+        }
+      }
+
+      .about-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .about-image {
+          width: 100%;
+          max-width: 420px;
+          border-radius: 8px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba($light-orange, 0.6);
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .about-page {
+    padding: 24px 16px 40px;
+
+    .page-intro h1.ant-typography {
+      font-size: 1.5rem;
+    }
+
+    .about-content .about-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      &.reverse {
+        .about-text {
+          order: 1;
+        }
+        .about-image-container {
+          order: 2;
+        }
+      }
+    }
+  }
+}

@@ -1,37 +1,47 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
 import AppFooter from './layout/Footer';
+import About from './pages/About/About';
 import './styles/main.scss';
 
 const { Content } = Layout;
 
 function App() {
   return (
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: '#FF9644',
-          colorTextBase: '#562F00',
-          // Customizing Menu colors to match your theme
-          colorItemBgSelected: '#FFCE99',
-        },
-      }}
-    >
-      <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <AppHeader />
+    <Router>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: '#FF9644',
+            colorTextBase: '#562F00',
+            colorItemBgSelected: '#FFCE99',
+          },
+        }}
+      >
+        <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <AppHeader />
 
-        <Content style={{ flex: 1, background: '#FFFDF1', padding: '24px' }}>
-          {/* This is where your individual pages will render later */}
-          <div className="page-content">
-            <h1>Welcome to the Aptis Practice Portal</h1>
-            <p>Select a skill from the menu to get started.</p>
-          </div>
-        </Content>
+          <Content style={{ flex: 1, background: '#FFFDF1' }}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <div className="page-content" style={{ padding: '24px' }}>
+                    <h1>Welcome to the Aptis Practice Portal</h1>
+                    <p>Select a skill from the menu to get started.</p>
+                  </div>
+                }
+              />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </Content>
 
-        <AppFooter />
-      </Layout>
-    </ConfigProvider>
+          <AppFooter />
+        </Layout>
+      </ConfigProvider>
+    </Router>
   );
 }
 
