@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
@@ -32,6 +33,17 @@ function App() {
         <AppFooter />
       </Layout>
     </ConfigProvider>
+=======
+
+import Layout from './layout/layout';
+import ReadingPart2 from './pages/Reading/pages/ReadingPart2';
+
+function App() {
+  return (
+    <Layout>
+      <ReadingPart2 />
+    </Layout>
+>>>>>>> fbfe42a (Initial commit: React app with Reading Part 2 feature)
   );
 }
 

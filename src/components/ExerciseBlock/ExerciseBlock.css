@@ -1,0 +1,161 @@
+/* ===== EXERCISE BLOCK ===== */
+.exercise-block {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+/* Header */
+.exercise-block__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px 8px;
+}
+
+.exercise-block__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.exercise-block__badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.exercise-block__badge--logic   { background-color: #1a73e8; }
+.exercise-block__badge--bia     { background-color: #e67e22; }
+
+/* Instruction */
+.exercise-block__instruction {
+    font-size: 0.82rem;
+    color: #777;
+    font-style: italic;
+    padding: 0 20px 12px;
+    margin: 0;
+}
+
+/* Sentence List */
+.exercise-block__list {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.exercise-block__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 9px 14px;
+    cursor: grab;
+    user-select: none;
+    transition: background 0.15s, box-shadow 0.15s;
+    font-size: 0.88rem;
+    color: #333;
+}
+
+.exercise-block__item:active {
+    cursor: grabbing;
+}
+
+.exercise-block__item.dragging {
+    opacity: 0.4;
+}
+
+.exercise-block__item.drag-over {
+    background: #e8f0fe;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26,115,232,0.3);
+}
+
+.exercise-block__item-num {
+    font-size: 0.75rem;
+    color: #999;
+    min-width: 22px;
+}
+
+/* Buttons */
+.exercise-block__actions {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.exercise-block__btn {
+    flex: 1;
+    padding: 11px 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.exercise-block__btn--check {
+    background: #1a73e8;
+    color: #fff;
+}
+
+.exercise-block__btn--check:hover {
+    background: #1558b0;
+}
+
+.exercise-block__btn--view {
+    background: #fff;
+    color: #1a73e8;
+    border-left: 1px solid #e0e0e0;
+}
+
+.exercise-block__btn--view:hover {
+    background: #f0f4ff;
+}
+
+/* Answer panel */
+.exercise-block__answer {
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 14px 20px;
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.exercise-block__answer h5 {
+    margin: 0 0 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.exercise-block__answer ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.exercise-block__answer li {
+    margin-bottom: 3px;
+}
+
+/* Result feedback */
+.exercise-block__result {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.exercise-block__result--correct { color: #27ae60; }
+.exercise-block__result--wrong   { color: #e74c3c; }
