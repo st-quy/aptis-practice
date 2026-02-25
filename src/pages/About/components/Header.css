@@ -1,0 +1,119 @@
+/* ===== HEADER ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+}
+
+/* Logo */
+.header__logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a73e8;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.header__logo:hover {
+    color: #1558b0;
+}
+
+/* Nav */
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header__nav a {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.header__nav a:hover {
+    background-color: #f0f4ff;
+    color: #1a73e8;
+}
+
+.header__nav a.active {
+    color: #1a73e8;
+    background-color: #e8f0fe;
+    font-weight: 600;
+}
+
+/* Hamburger (mobile) */
+.header__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.header__toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #444;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .header__toggle {
+        display: flex;
+    }
+
+    .header__nav {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 20px 16px;
+        border-top: 1px solid #e0e0e0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        gap: 2px;
+    }
+
+    .header__nav.open {
+        display: flex;
+    }
+
+    .header__nav a {
+        width: 100%;
+        padding: 10px 8px;
+    }
+}
