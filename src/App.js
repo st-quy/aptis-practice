@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ConfigProvider, Layout } from 'antd';
+import AppHeader from './layout/Header';
+import AppFooter from './layout/Footer';
+import './styles/main.scss';
+
+const { Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: '#FF9644',
+          colorTextBase: '#562F00',
+          // Customizing Menu colors to match your theme
+          colorItemBgSelected: '#FFCE99',
+        },
+      }}
+    >
+      <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <AppHeader />
+
+        <Content style={{ flex: 1, background: '#FFFDF1', padding: '24px' }}>
+          {/* This is where your individual pages will render later */}
+          <div className="page-content">
+            <h1>Welcome to the Aptis Practice Portal</h1>
+            <p>Select a skill from the menu to get started.</p>
+          </div>
+        </Content>
+
+        <AppFooter />
+      </Layout>
+    </ConfigProvider>
   );
 }
 
