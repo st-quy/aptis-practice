@@ -1,0 +1,10 @@
+// Import Ant Design styles
+@import 'antd/dist/reset.css';
+
+// Import your variables
+@import 'variables';
+
+body {
+  margin: 0;
+  font-family: -apple-system, sans-serif;
+}
