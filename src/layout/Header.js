@@ -14,12 +14,12 @@ const AppHeader = () => {
 
   const navItems = [
     { key: 'home', label: <Link to="/">Trang Chủ</Link> },
-    { key: 'intro', label: 'Giới thiệu' },
-    { key: 'vocab', label: 'Từ Vựng' },
-    { key: 'reading', label: <Link to="/reading-part1">Reading</Link> },
-    { key: 'listening', label: <Link to="/listening-part1">Listening</Link> },
-    { key: 'writing', label: 'Writing' },
-    { key: 'speaking', label: 'Speaking' },
+    { key: '/about', label: <Link to="/about">Giới thiệu</Link> },
+    { key: '/vocab', label: <Link to="/vocab">Từ Vựng</Link> },
+    { key: '/reading-part1', label: <Link to="/reading-part1">Reading</Link> },
+    { key: '/listening-part1', label: <Link to="/listening-part1">Listening</Link> },
+    { key: '/writing-part1', label: <Link to="/writing-part1">Writing</Link> },
+    { key: '/speaking-part1', label: <Link to="/speaking-part1">Speaking</Link> },
   ];
 
   const handleMenuClick = ({ key }) => {

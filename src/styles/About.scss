@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import 'variables';
 
 .about-page {
   max-width: 960px;
@@ -10,7 +10,7 @@
     margin-bottom: 48px;
 
     h1.ant-typography {
-      color: $deep-brown;
+      color: $color-brown-dark;
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 12px;
@@ -18,7 +18,7 @@
 
     .intro-subtitle {
       font-size: 1.1rem;
-      color: rgba($deep-brown, 0.75);
+      color: rgba($color-brown-dark, 0.75);
     }
   }
 
@@ -27,11 +27,11 @@
       margin-bottom: 48px;
 
       h2.ant-typography {
-        color: $deep-brown;
+        color: $color-brown-dark;
         font-weight: 700;
         margin-bottom: 16px;
         padding-bottom: 10px;
-        border-bottom: 2px solid $light-orange;
+        border-bottom: 2px solid $color-orange-light;
       }
 
       > .ant-typography {
@@ -48,7 +48,7 @@
       align-items: center;
       margin: 32px 0;
       padding: 24px 0;
-      border-bottom: 1px solid rgba($light-orange, 0.5);
+      border-bottom: 1px solid rgba($color-orange-light, 0.5);
 
       &:last-child {
         border-bottom: none;
@@ -65,7 +65,7 @@
 
       .about-text {
         h4.ant-typography {
-          color: $deep-brown;
+          color: $color-brown-dark;
           font-weight: 600;
           margin-bottom: 12px;
         }
@@ -85,8 +85,8 @@
         }
 
         code {
-          background: $light-orange;
-          color: $deep-brown;
+          background: $color-orange-light;
+          color: $color-brown-dark;
           padding: 2px 8px;
           border-radius: 4px;
           font-size: 0.9em;
@@ -103,7 +103,7 @@
           max-width: 420px;
           border-radius: 8px;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-          border: 1px solid rgba($light-orange, 0.6);
+          border: 1px solid rgba($color-orange-light, 0.6);
         }
       }
     }

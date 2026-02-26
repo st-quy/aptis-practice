@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from 'antd';
-import './About.scss';
+import '../../styles/About.scss';
 
 const { Title, Paragraph, Text } = Typography;
 
