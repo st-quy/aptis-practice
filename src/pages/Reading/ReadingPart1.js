@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Radio, Button, Typography, Space } from 'antd';
 import { BulbOutlined } from '@ant-design/icons';
-import './ReadingPart1.scss';
+import '../../styles/ReadingPart1.scss';
 
 const { Title, Paragraph, Text } = Typography;
 
