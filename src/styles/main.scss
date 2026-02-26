@@ -7,4 +7,149 @@
 body {
   margin: 0;
   font-family: -apple-system, sans-serif;
+  background-color: $milk-white;
+  color: $deep-brown;
+}
+
+.app-header {
+  background-color: $milk-white !important;
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.app-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 64px;
+}
+
+.logo-text {
+  margin: 0 !important;
+  color: $brand-orange !important;
+}
+
+.main-menu {
+  background: transparent !important;
+  border-bottom: none !important;
+
+  .ant-menu-item {
+    color: $deep-brown;
+  }
+
+  .ant-menu-item-selected {
+    background-color: $light-orange !important;
+    color: $deep-brown !important;
+  }
+}
+
+.app-footer {
+  background-color: $milk-white !important;
+  color: $deep-brown !important;
+  padding: 40px 16px 24px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 32px;
+  margin-bottom: 24px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $deep-brown;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.faq-page {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  max-width: 960px;
+  width: 100%;
+}
+
+.page-intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  margin-bottom: 8px !important;
+  color: $deep-brown !important;
+}
+
+.page-subtitle {
+  margin: 0;
+  color: rgba($deep-brown, 0.8);
+}
+
+.faq-collapse {
+  background: transparent;
+
+  .ant-collapse-item {
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border: none;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .ant-collapse-header {
+    font-weight: 500;
+    color: $deep-brown;
+    background: #fff;
+  }
+
+  .ant-collapse-item-active .ant-collapse-header {
+    background: $light-orange;
+  }
+
+  .ant-collapse-content {
+    background: #fffdfc;
+  }
+}
+
+.faq-steps {
+  padding-left: 20px;
+  margin-bottom: 0;
 }

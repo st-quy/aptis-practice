@@ -16,28 +16,23 @@ const AppHeader = () => {
   ];
 
   return (
-    <AntHeader style={{ background: '#FFCE99', padding: '0 20px' }}>
-      <Flex justify="space-between" align="center" style={{ height: '100%' }}>
-        {/* Logo Section */}
-        <div className="logo">
-          <Title level={4} style={{ margin: 0, color: '#562F00' }}>
-            APTIS LOGO
-          </Title>
-        </div>
+    <AntHeader className="app-header">
+      <div className="app-header-inner">
+        <Flex justify="space-between" align="center" style={{ height: '100%' }}>
+          <div className="logo">
+            <Title level={4} className="logo-text">
+              Aptis Practice
+            </Title>
+          </div>
 
-        {/* Navigation Section */}
-        <Menu
-          mode="horizontal"
-          items={navItems}
-          style={{
-            background: 'transparent',
-            borderBottom: 'none',
-            minWidth: 600,
-            justifyContent: 'end'
-          }}
-          disabledOverflow // Keeps items from hiding in a "..." menu
-        />
-      </Flex>
+          <Menu
+            mode="horizontal"
+            items={navItems}
+            className="main-menu"
+            disabledOverflow
+          />
+        </Flex>
+      </div>
     </AntHeader>
   );
 };
