@@ -36,7 +36,6 @@ const AppHeader = () => {
           </Title>
         </div>
 
-        {/* Navigation Section */}
         <Menu
           mode="horizontal"
           selectedKeys={[location.pathname]}
@@ -50,7 +49,7 @@ const AppHeader = () => {
           }}
           disabledOverflow
         />
-      </Flex>
+      </div>
     </AntHeader>
   );
 };
