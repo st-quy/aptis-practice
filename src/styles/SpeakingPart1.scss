@@ -1,0 +1,138 @@
+// ColorHunt Palette
+$bg-cream: #fffdf1;
+$light-orange: #ffce99;
+$primary-orange: #ff9644;
+$dark-brown: #562f00;
+$border-radius: 12px;
+
+.speaking-part1-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  color: $dark-brown;
+
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: $dark-brown !important;
+    margin-bottom: 8px !important;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    opacity: 0.85;
+    font-size: 1.1rem;
+    margin-bottom: 32px !important;
+  }
+
+  // Common Box Styles
+  .info-box {
+    border-radius: $border-radius;
+    padding: 24px;
+    margin-bottom: 24px;
+
+    .box-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .box-icon {
+        color: $primary-orange;
+        font-size: 1.3rem;
+      }
+    }
+
+    .steps-list {
+      margin: 12px 0 0 20px;
+      padding: 0;
+
+      li {
+        margin-bottom: 12px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .method-box {
+    background: rgba($light-orange, 0.2);
+    border: 2px solid $light-orange;
+    box-shadow: 6px 6px 0 $light-orange;
+  }
+
+  .strategy-box {
+    background: rgba($light-orange, 0.1);
+    border: 2px solid $primary-orange;
+  }
+
+  // Action Button Area
+  .action-section {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+
+    .start-btn {
+      height: 50px;
+      padding: 0 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background-color: $primary-orange !important;
+      border-color: $primary-orange !important;
+      transition: all 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: $dark-brown !important;
+        border-color: $dark-brown !important;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // The Question Card
+  .practice-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: $border-radius;
+    border: 2px solid $light-orange;
+    box-shadow: 8px 8px 0 rgba($light-orange, 0.3);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+
+    .question-header {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $primary-orange;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .question-display {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+
+    .completion-msg {
+      color: #2ecc71;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+  }
+}
+
+// Global Help Button Tweaks (Specific to this page)
+.help-btn {
+  background-color: $primary-orange !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

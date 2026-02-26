@@ -8,6 +8,7 @@ import ListeningPart1 from './pages/Listening/ListeningPart1';
 import ReadingPart1 from './pages/Reading/ReadingPart1';
 import WritingPart1 from './pages/Writing/WritingPart1';
 import Vocabulary from './pages/Vocabulary/Vocabulary';
+import SpeakingPart1 from './pages/Speaking/SpeakingPart1';
 import './styles/main.scss';
 
 
@@ -38,6 +39,7 @@ function App() {
                 </div>
               }
             />
+            <Route path="/speaking-part1" element={<SpeakingPart1 />} />
             <Route path="/vocabulary" element={<Vocabulary />} />
             <Route path="/writing-part1" element={<WritingPart1 />} />
             <Route path="/about" element={<About />} />
