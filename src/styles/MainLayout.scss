@@ -1,0 +1,33 @@
+@import 'variables';
+
+.page-wrapper {
+  background-color: var(--color-main-white) !important;
+  min-height: 100vh;
+}
+
+.high-spec-header {
+  background-color: #FFFFFF !important;
+  border-bottom: 3px solid var(--color-orange-light);
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.main-content {
+  padding: 24px 50px;
+  background-color: var(--color-main-white);
+}
+
+.high-spec-footer {
+  text-align: center;
+  background-color: var(--color-brown-dark) !important;
+  color: var(--color-main-white) !important;
+  border-top: 4px solid var(--color-orange-main);
+  padding: 24px 50px;
+}
+
+.content-container {
+  min-height: 280px;
+  padding: 24px;
+  background: transparent;
+}
