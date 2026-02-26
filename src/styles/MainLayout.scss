@@ -1,13 +1,13 @@
 @import 'variables';
 
 .page-wrapper {
-  background-color: var(--color-main-white) !important;
+  background-color: $color-brand-white !important;
   min-height: 100vh;
 }
 
 .high-spec-header {
-  background-color: #FFFFFF !important;
-  border-bottom: 3px solid var(--color-orange-light);
+  background-color: $color-white !important;
+  border-bottom: 3px solid $color-brand-orange-light;
   display: flex;
   align-items: center;
   padding: 0 50px;
@@ -15,14 +15,14 @@
 
 .main-content {
   padding: 24px 50px;
-  background-color: var(--color-main-white);
+  background-color: $color-brand-white;
 }
 
 .high-spec-footer {
   text-align: center;
-  background-color: var(--color-brown-dark) !important;
-  color: var(--color-main-white) !important;
-  border-top: 4px solid var(--color-orange-main);
+  background-color: $color-brand-brown !important;
+  color: $color-brand-white !important;
+  border-top: 4px solid $color-brand-orange;
   padding: 24px 50px;
 }
 

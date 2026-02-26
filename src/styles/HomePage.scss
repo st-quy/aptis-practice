@@ -1,25 +1,7 @@
 @import 'variables';
 
 .home-page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
-
-  // ── Title Area ──
-  &__title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: $color-brown-dark;
-    margin-bottom: 4px;
-  }
-
-  &__subtitle {
-    text-align: center;
-    font-size: 15px;
-    color: rgba($color-brown-dark, 0.65);
-    margin-bottom: 32px;
-  }
+  @extend %page-container;
 
   // ── Tabs Override ──
   .ant-tabs {
@@ -34,22 +16,22 @@
 
     .ant-tabs-tab {
       font-size: 15px;
-      color: rgba($color-brown-dark, 0.55);
+      color: rgba($color-brand-brown, 0.55);
       padding: 8px 0;
       transition: color 0.25s;
 
       &:hover {
-        color: $color-orange-main;
+        color: $color-brand-orange;
       }
 
       &.ant-tabs-tab-active .ant-tabs-tab-btn {
-        color: $color-orange-main;
+        color: $color-brand-orange;
         font-weight: 600;
       }
     }
 
     .ant-tabs-ink-bar {
-      background: $color-orange-main;
+      background: $color-brand-orange;
       height: 3px;
       border-radius: 3px;
     }
@@ -72,8 +54,8 @@
 
   // ── Individual Card ──
   &__card {
-    background: #fff;
-    border: 1.5px solid rgba($color-orange-light, 0.5);
+    background: $color-white;
+    border: 1.5px solid rgba($color-brand-orange-light, 0.5);
     border-radius: 12px;
     padding: 20px 18px;
     cursor: pointer;
@@ -88,14 +70,14 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, $color-orange-main, $color-orange-light);
+      background: linear-gradient(90deg, $color-brand-orange, $color-brand-orange-light);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     &:hover {
-      border-color: $color-orange-main;
-      box-shadow: 0 6px 20px rgba($color-orange-main, 0.15);
+      border-color: $color-brand-orange;
+      box-shadow: 0 6px 20px rgba($color-brand-orange, 0.15);
       transform: translateY(-3px);
 
       &::before {
@@ -106,34 +88,34 @@
     &-title {
       font-size: 15px;
       font-weight: 700;
-      color: $color-orange-main;
+      color: $color-brand-orange;
       margin-bottom: 8px;
     }
 
     &-desc {
       font-size: 13px;
       line-height: 1.55;
-      color: rgba($color-brown-dark, 0.7);
+      color: rgba($color-brand-brown, 0.7);
       margin: 0;
     }
   }
 
   // ── Highlight variant (red cards) ──
   &__card--highlight {
-    border-left: 3px solid #e74c3c;
+    border-left: 3px solid $color-danger;
 
     .home-page__card-title {
-      color: #e74c3c;
+      color: $color-danger;
     }
 
     &:hover {
-      border-color: #e74c3c;
-      border-left: 3px solid #e74c3c;
-      box-shadow: 0 6px 20px rgba(#e74c3c, 0.15);
+      border-color: $color-danger;
+      border-left: 3px solid $color-danger;
+      box-shadow: 0 6px 20px rgba($color-danger, 0.15);
     }
 
     &::before {
-      background: linear-gradient(90deg, #e74c3c, #ff7675);
+      background: linear-gradient(90deg, $color-danger, $color-danger-light);
     }
   }
 }

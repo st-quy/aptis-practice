@@ -7,14 +7,13 @@ const { Title, Paragraph, Text } = Typography;
 const About = () => {
   return (
     <div className="about-page">
-      <div className="container">
-        {/* Page Intro */}
-        <div className="page-intro">
-          <Title level={1}>Giới Thiệu & Hướng Dẫn Sử Dụng</Title>
-          <Paragraph className="intro-subtitle">
-            Khám phá bố cục và cách tận dụng tối đa các công cụ trên Aptis Practice.
-          </Paragraph>
-        </div>
+      {/* Page Intro */}
+      <div className="page-intro">
+        <Title level={1} className="page-intro__title">Giới Thiệu & Hướng Dẫn Sử Dụng</Title>
+        <Paragraph className="page-intro__subtitle">
+          Khám phá bố cục và cách tận dụng tối đa các công cụ trên Aptis Practice.
+        </Paragraph>
+      </div>
 
         <div className="about-content">
           {/* Section: Mục Tiêu */}
@@ -153,7 +152,6 @@ const About = () => {
             </Paragraph>
           </div>
         </div>
-      </div>
     </div>
   );
 };

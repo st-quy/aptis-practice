@@ -1,19 +1,19 @@
+import { Typography } from 'antd';
 import { vocabularyData } from '../../data/VocabularyData';
 import { VocabularyTable } from '../../components/VocabularyTable';
 import '../../styles/Vocabulary.scss'
+
+const { Title, Text } = Typography;
 
 export default function Vocabulary() {
   return (
     <>
       <title>Tổng hợp Từ vựng Quan trọng</title>
-      <div className="content-pusher">
-        <div className="container">
-          <div className="page-intro">
-            <h1>Tổng hợp Từ vựng Quan trọng</h1>
-            <p>Từ vựng theo chủ đề Nơi chốn và Con người</p>
-          </div>
-
-          <main className="vocabulary-container">
+      <main className="vocabulary-container">
+        <div className="page-intro">
+          <Title level={1} className="page-intro__title">Tổng hợp Từ vựng Quan trọng</Title>
+          <Text className="page-intro__subtitle">Từ vựng theo chủ đề Nơi chốn và Con người</Text>
+        </div>
             {/* PLACES VOCABULARY */}
             <div className="vocab-section">
               <h2>Từ vựng Nơi chốn</h2>
@@ -115,12 +115,11 @@ export default function Vocabulary() {
               <VocabularyTable
                 title="Động từ và tính từ biểu hiện cảm xúc"
                 data={vocabularyData.details.emotions}
-              />
-            </div>
-          </main>
-        </div>
-      </div>
-    </>
-
-  );
-}
+                        />
+                      </div>
+                    </main>
+                  </>
+              
+                );
+              }
+              

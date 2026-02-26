@@ -22,8 +22,8 @@ const ListeningPart1 = () => {
   return (
     <div className="listening-part1">
         <div className="page-intro">
-          <Title level={1}>Listening - Part 1 (Câu 1-13)</Title>
-          <Text>Luyện tập ghi nhớ đáp án</Text>
+          <Title level={1} className="page-intro__title">Listening - Part 1 (Câu 1-13)</Title>
+          <Text className="page-intro__subtitle">Luyện tập ghi nhớ đáp án</Text>
         </div>
 
         <div className="explanation-box">

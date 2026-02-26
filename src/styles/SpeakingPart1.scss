@@ -1,30 +1,10 @@
-// ColorHunt Palette
-$bg-cream: #fffdf1;
-$light-orange: #ffce99;
-$primary-orange: #ff9644;
-$dark-brown: #562f00;
+@import 'variables';
+
 $border-radius: 12px;
 
 .speaking-part1-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-  color: $dark-brown;
-
-  .section-title {
-    text-align: center;
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    color: $dark-brown !important;
-    margin-bottom: 8px !important;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    opacity: 0.85;
-    font-size: 1.1rem;
-    margin-bottom: 32px !important;
-  }
+  @extend %page-container;
+  color: $color-brand-brown;
 
   // Common Box Styles
   .info-box {
@@ -41,7 +21,7 @@ $border-radius: 12px;
       gap: 10px;
 
       .box-icon {
-        color: $primary-orange;
+        color: $color-brand-orange;
         font-size: 1.3rem;
       }
     }
@@ -58,14 +38,14 @@ $border-radius: 12px;
   }
 
   .method-box {
-    background: rgba($light-orange, 0.2);
-    border: 2px solid $light-orange;
-    box-shadow: 6px 6px 0 $light-orange;
+    background: rgba($color-brand-orange-light, 0.2);
+    border: 2px solid $color-brand-orange-light;
+    box-shadow: 6px 6px 0 $color-brand-orange-light;
   }
 
   .strategy-box {
-    background: rgba($light-orange, 0.1);
-    border: 2px solid $primary-orange;
+    background: rgba($color-brand-orange-light, 0.1);
+    border: 2px solid $color-brand-orange;
   }
 
   // Action Button Area
@@ -80,13 +60,13 @@ $border-radius: 12px;
       font-size: 1.1rem;
       font-weight: 600;
       border-radius: 8px;
-      background-color: $primary-orange !important;
-      border-color: $primary-orange !important;
+      background-color: $color-brand-orange !important;
+      border-color: $color-brand-orange !important;
       transition: all 0.3s ease;
 
       &:hover:not(:disabled) {
-        background-color: $dark-brown !important;
-        border-color: $dark-brown !important;
+        background-color: $color-brand-brown !important;
+        border-color: $color-brand-brown !important;
         transform: translateY(-2px);
       }
     }
@@ -94,11 +74,11 @@ $border-radius: 12px;
 
   // The Question Card
   .practice-card {
-    background: #ffffff;
+    background: $color-white;
     padding: 30px;
     border-radius: $border-radius;
-    border: 2px solid $light-orange;
-    box-shadow: 8px 8px 0 rgba($light-orange, 0.3);
+    border: 2px solid $color-brand-orange-light;
+    box-shadow: 8px 8px 0 rgba($color-brand-orange-light, 0.3);
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
 
@@ -106,7 +86,7 @@ $border-radius: 12px;
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: $primary-orange;
+      color: $color-brand-orange;
       font-weight: 700;
       margin-bottom: 16px;
     }
@@ -119,7 +99,7 @@ $border-radius: 12px;
     }
 
     .completion-msg {
-      color: #2ecc71;
+      color: $color-success;
       font-weight: 600;
       font-size: 1.1rem;
       margin-top: 20px;
@@ -129,7 +109,7 @@ $border-radius: 12px;
 
 // Global Help Button Tweaks (Specific to this page)
 .help-btn {
-  background-color: $primary-orange !important;
+  background-color: $color-brand-orange !important;
 }
 
 @keyframes fadeIn {

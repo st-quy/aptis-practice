@@ -1,7 +1,8 @@
 /* src/styles/vocabulary.css */
+@import 'variables';
 
 .vocabulary-container {
-  padding: 20px 0;
+  @extend %page-container;
 }
 
 .vocab-section {
@@ -9,30 +10,28 @@
 }
 
 .vocab-section h2 {
-  font-size: 1.8em;
-  color: var(--primary-hover, #333);
-  border-bottom: 2px solid var(--primary-hover, #007bff);
-   margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: $color-brand-brown;
+  border-bottom: 2px solid $color-brand-orange;
+  margin-bottom: 20px;
   padding-bottom: 10px;
+  font-weight: 700;
 }
 
 .vocab-table-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @extend %content-card;
   overflow-x: auto;
 }
 
 .vocab-table-card h3 {
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  color: #34495e;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: $color-brand-brown;
+  font-weight: 600;
 }
 
 .structure-guide {
-  background-color: #e9ecef;
+  background-color: $color-gray-2;
   padding: 8px 12px;
   border-radius: 5px;
   margin: -10px 0 15px 0;
@@ -41,24 +40,8 @@
 
 .structure-guide code {
   font-weight: bold;
-  color: #333;
+  color: $color-gray-8;
   font-family: 'Courier New', monospace;
-}
-
-/* Page intro styling */
-.page-intro {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.page-intro h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.page-intro p {
-  font-size: 1.1em;
-  color: #666;
 }
 
 /* Responsive design */

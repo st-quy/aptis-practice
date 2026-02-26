@@ -1,6 +1,8 @@
 import React from 'react';
-import { Tabs } from 'antd';
+import { Tabs, Typography } from 'antd';
 import '../../styles/HomePage.scss';
+const { Title, Text } = Typography;
+
 
 // ── Card data per tab ──
 
@@ -109,10 +111,12 @@ const tabItems = [
 const HomePage = () => {
   return (
     <div className="home-page">
-      <h1 className="home-page__title">Aptis Practice</h1>
-      <p className="home-page__subtitle">
-        Chọn một kỹ năng để bắt đầu luyện tập
-      </p>
+      <div className="page-intro">
+        <Title level={1} className="page-intro__title">Aptis Practice</Title>
+        <Text className="page-intro__subtitle">
+          Chọn một kỹ năng để bắt đầu luyện tập
+        </Text>
+      </div>
 
       <Tabs
         defaultActiveKey="guide"

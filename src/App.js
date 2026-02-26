@@ -23,6 +23,7 @@ function App() {
           colorPrimary: '#FF9644',
           colorTextBase: '#562F00',
           colorItemBgSelected: '#FFCE99',
+          fontFamily: "'Be Vietnam Pro', sans-serif",
         },
       }}
     >

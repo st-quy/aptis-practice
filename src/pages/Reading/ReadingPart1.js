@@ -124,7 +124,10 @@ const ReadingPart1 = () => {
 
   return (
     <div className="reading-container">
-      <Title level={2} align="center">Reading - Part 1 Quiz</Title>
+      <div className="page-intro">
+        <Title level={1} className="page-intro__title">Reading - Part 1 Quiz</Title>
+        <Paragraph className="page-intro__subtitle">Luyện tập chọn từ phù hợp</Paragraph>
+      </div>
 
       <Card className="instruction-card">
         <Space><BulbOutlined style={{color: '#ff9c6e'}}/> <Text strong>Phương pháp làm bài</Text></Space>

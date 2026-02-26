@@ -66,13 +66,14 @@ const SpeakingPart1 = () => {
 
   return (
     <div className="speaking-part1-page">
-      <main className="speaking-content">
-        <Title level={1} className="section-title">
-          Speaking - Part 1
-        </Title>
-        <Paragraph className="section-subtitle">
+      <div className="page-intro">
+        <Title level={1} className="page-intro__title">Speaking - Part 1</Title>
+        <Paragraph className="page-intro__subtitle">
           Luyện tập trả lời câu hỏi với đồng hồ bấm giờ
         </Paragraph>
+      </div>
+
+      <main className="speaking-content">
 
         {/* Practice Methods */}
         <div className="info-box method-box">

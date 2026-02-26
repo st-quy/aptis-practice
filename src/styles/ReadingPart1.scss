@@ -1,13 +1,11 @@
 @import 'variables';
 
 .reading-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  @extend %page-container;
 
   .instruction-card {
-    background-color: #fff7e6;
-    border-left: 4px solid #ff9c6e;
+    background-color: $color-warning-bg;
+    border-left: 4px solid $color-brand-orange;
     border-radius: 8px;
     margin-bottom: 40px;
   }
@@ -15,24 +13,24 @@
   .question-box {
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid $color-gray-3;
     border-radius: 12px;
     transition: all 0.3s;
-    background: #fff;
+    background: $color-white;
 
     .q-text { font-size: 16px; margin-bottom: 15px; display: block; }
 
     .opt-item {
-      border: 1px solid #f0f0f0;
+      border: 1px solid $color-gray-3;
       margin: 8px 0;
       padding: 10px;
       border-radius: 8px;
       width: 100%;
-      &.is-answer { background: rgba(82, 196, 26, 0.1); border-color: #52c41a; font-weight: bold; }
+      &.is-answer { background: $color-success-bg; border-color: $color-success; font-weight: bold; }
     }
 
-    &.correct { background-color: #f6ffed; border-left: 6px solid #52c41a; border-color: #b7eb8f; }
-    &.incorrect { background-color: #fff1f0; border-left: 6px solid #ff4d4f; border-color: #ffa39e; }
+    &.correct { background-color: $color-success-bg; border-left: 6px solid $color-success; border-color: $color-success; }
+    &.incorrect { background-color: $color-error-bg; border-left: 6px solid $color-error; border-color: $color-error; }
 
     .result-text { margin-top: 10px; font-weight: bold; }
   }
@@ -50,14 +48,14 @@
 
       .num-btn {
         width: 45px; height: 45px; border-radius: 8px; font-weight: bold;
-        border: 1px solid #d9d9d9;
+        border: 1px solid $color-gray-4;
 
         &.active {
-          background-color: #ff9c6e !important;
-          color: white !important;
-          border-color: #ff9c6e !important;
+          background-color: $color-brand-orange !important;
+          color: $color-white !important;
+          border-color: $color-brand-orange !important;
         }
-        &:hover { color: #ff9c6e; border-color: #ff9c6e; }
+        &:hover { color: $color-brand-orange; border-color: $color-brand-orange; }
       }
     }
 
@@ -71,18 +69,18 @@
           width: 100% !important; // Buộc nút dài tràn khung
           max-width: 800px;
           height: 60px !important;
-          background-color: #ff9c6e !important;
+          background-color: $color-brand-orange !important;
           border: none !important;
           border-radius: 12px;
           font-size: 18px !important;
           font-weight: bold;
-          color: white;
-          box-shadow: 0 4px 10px rgba(255, 156, 110, 0.3);
+          color: $color-white;
+          box-shadow: 0 4px 10px rgba($color-brand-orange, 0.3);
 
           &:hover {
             opacity: 0.9;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(255, 156, 110, 0.4);
+            box-shadow: 0 6px 15px rgba($color-brand-orange, 0.4);
           }
         }
     }

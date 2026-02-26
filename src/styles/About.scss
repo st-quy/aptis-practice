@@ -1,37 +1,18 @@
 @import 'variables';
 
 .about-page {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-
-  .page-intro {
-    text-align: center;
-    margin-bottom: 48px;
-
-    h1.ant-typography {
-      color: $color-brown-dark;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .intro-subtitle {
-      font-size: 1.1rem;
-      color: rgba($color-brown-dark, 0.75);
-    }
-  }
+  @extend %page-container;
 
   .about-content {
     .section {
       margin-bottom: 48px;
 
       h2.ant-typography {
-        color: $color-brown-dark;
+        color: $color-brand-brown;
         font-weight: 700;
         margin-bottom: 16px;
         padding-bottom: 10px;
-        border-bottom: 2px solid $color-orange-light;
+        border-bottom: 2px solid $color-brand-orange-light;
       }
 
       > .ant-typography {
@@ -48,7 +29,7 @@
       align-items: center;
       margin: 32px 0;
       padding: 24px 0;
-      border-bottom: 1px solid rgba($color-orange-light, 0.5);
+      border-bottom: 1px solid rgba($color-brand-orange-light, 0.5);
 
       &:last-child {
         border-bottom: none;
@@ -65,7 +46,7 @@
 
       .about-text {
         h4.ant-typography {
-          color: $color-brown-dark;
+          color: $color-brand-brown;
           font-weight: 600;
           margin-bottom: 12px;
         }
@@ -85,8 +66,8 @@
         }
 
         code {
-          background: $color-orange-light;
-          color: $color-brown-dark;
+          background: $color-brand-orange-light;
+          color: $color-brand-brown;
           padding: 2px 8px;
           border-radius: 4px;
           font-size: 0.9em;
@@ -102,8 +83,8 @@
           width: 100%;
           max-width: 420px;
           border-radius: 8px;
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-          border: 1px solid rgba($color-orange-light, 0.6);
+          box-shadow: $shadow-md;
+          border: 1px solid rgba($color-brand-orange-light, 0.6);
         }
       }
     }

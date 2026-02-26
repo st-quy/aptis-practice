@@ -4,42 +4,46 @@
 // Import your variables
 @import 'variables';
 @import "@fontsource/be-vietnam-pro"; // Defaults to weight 400
-:root {
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
-    --secondary-color: #f8f9fa;
-    --background-color: #f4f7f9;
-    --text-color: #333;
-    --border-color: #dee2e6;
-    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    --card-radius: 12px;
-}
 
 body {
   margin: 0;
   font-family: 'Be Vietnam Pro', sans-serif;
-  background-color: #f4f7f9;
-
+  background-color: $color-brand-white;
+  color: $color-brand-brown;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+// --- Standard Global Layout Classes ---
+.page-container {
+    @extend %page-container;
 }
 
 .page-intro {
     text-align: center;
-    margin: 40px 0;
+    margin-bottom: 40px;
+
+    &__title {
+        color: $color-brand-brown;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        line-height: 1.2;
+    }
+
+    &__subtitle {
+        color: $color-brand-orange;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+    }
 }
 
-.page-intro h1 {
-    color: #2c3e50;
-    font-weight: 700;
-    margin-bottom: 5px;
+// --- Common UI Patterns ---
+.content-card {
+    @extend %content-card;
 }
 
-.page-intro p {
-    color: #7f8c8d;
-    font-size: 1.1em;
+.section-divider {
+    border-top: 2px solid $color-brand-white;
+    margin-top: 40px;
+    padding-top: 30px;
 }
