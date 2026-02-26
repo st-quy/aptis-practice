@@ -15,7 +15,7 @@ const AppHeader = () => {
   const navItems = [
     { key: '/home', label: <Link to="/">Trang Chủ</Link> },
     { key: '/about', label: <Link to="/about">Giới thiệu</Link> },
-    { key: '/vocab', label: <Link to="/vocab">Từ Vựng</Link> },
+    { key: '/vocabulary', label: <Link to="/vocabulary">Từ Vựng</Link> },
     { key: '/reading-part1', label: <Link to="/reading-part1">Reading</Link> },
     { key: '/listening-part1', label: <Link to="/listening-part1">Listening</Link> },
     { key: '/writing-part1', label: <Link to="/writing-part1">Writing</Link> },

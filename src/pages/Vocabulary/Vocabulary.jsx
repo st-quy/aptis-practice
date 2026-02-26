@@ -1,8 +1,8 @@
-import { vocabularyData } from '../data/VocabularyData';
-import { VocabularyTable } from '../components/VocabularyTable';
-import '../styles/pages/Vocabulary.scss'
+import { vocabularyData } from '../../data/VocabularyData';
+import { VocabularyTable } from '../../components/VocabularyTable';
+import '../../styles/Vocabulary.scss'
 
-export function Vocabulary() {
+export default function Vocabulary() {
   return (
     <>
       <title>Tổng hợp Từ vựng Quan trọng</title>
