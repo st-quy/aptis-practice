@@ -1,20 +1,20 @@
 /* ===== METHOD EXPLANATION ===== */
 .method-box {
-    background: #fff;
-    border: 1px solid #b8d4f8;
-    border-left: 4px solid #1a73e8;
+    background: #FFFDF1;
+    border: 1px solid #FFCE99;
+    border-left: 4px solid #FF9644;
     border-radius: 6px;
     padding: 18px 22px;
     margin-bottom: 32px;
     font-size: 0.875rem;
-    color: #333;
+    color: #562F00;
     line-height: 1.65;
 }
 
 .method-box__heading {
     font-size: 1rem;
     font-weight: 700;
-    color: #1a73e8;
+    color: #FF9644;
     margin: 0 0 12px;
     display: flex;
     align-items: center;
@@ -31,16 +31,16 @@
 
 .method-box__label {
     font-weight: 700;
-    color: #222;
+    color: #562F00;
 }
 
-.method-box__label--orange { color: #e67e22; }
-.method-box__label--blue   { color: #1a73e8; }
+.method-box__label--orange { color: #FF9644; }
+.method-box__label--blue   { color: #FF9644; }
 
 .method-box__example-title {
     font-style: italic;
     font-weight: 600;
-    color: #555;
+    color: rgba(86, 47, 0, 0.86);
     margin: 6px 0 4px;
 }
 
@@ -55,7 +55,7 @@
 
 .method-box__ordered li strong {
     font-style: italic;
-    color: #1a73e8;
+    color: #FF9644;
 }
 
 .method-box__bullets {
@@ -75,35 +75,35 @@
 }
 
 .method-box__bullets li::before {
-    content: 'â€¢';
-    color: #1a73e8;
+    content: '•';
+    color: #FF9644;
     flex-shrink: 0;
     margin-top: 1px;
 }
 
 .method-box__bullets li em {
-    color: #1a73e8;
+    color: #FF9644;
     font-weight: 600;
     font-style: normal;
 }
 
 .method-box__key {
-    background: #fff3cd;
-    border: 1px solid #ffc107;
+    background: #FFCE99;
+    border: 1px solid #FF9644;
     border-radius: 4px;
     padding: 2px 7px;
     font-weight: 700;
     font-size: 0.78rem;
-    color: #856404;
+    color: #562F00;
 }
 
 .method-box blockquote {
     margin: 6px 0 0 0;
     padding: 8px 14px;
-    background: #f0f4ff;
-    border-left: 3px solid #1a73e8;
+    background: #FFCE99;
+    border-left: 3px solid #FF9644;
     border-radius: 3px;
     font-style: italic;
     font-size: 0.83rem;
-    color: #444;
+    color: #562F00;
 }

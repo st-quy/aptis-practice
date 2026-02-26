@@ -1,7 +1,7 @@
 /* ===== EXERCISE BLOCK ===== */
 .exercise-block {
-    background: #fff;
-    border: 1px solid #e0e0e0;
+    background: #FFFDF1;
+    border: 1px solid #FFCE99;
     border-radius: 8px;
     margin-bottom: 32px;
     overflow: hidden;
@@ -18,7 +18,7 @@
 .exercise-block__title {
     font-size: 1rem;
     font-weight: 700;
-    color: #222;
+    color: #562F00;
     margin: 0;
 }
 
@@ -27,17 +27,17 @@
     font-weight: 600;
     padding: 3px 10px;
     border-radius: 12px;
-    color: #fff;
+    color: #FFFDF1;
     white-space: nowrap;
 }
 
-.exercise-block__badge--logic   { background-color: #1a73e8; }
-.exercise-block__badge--bia     { background-color: #e67e22; }
+.exercise-block__badge--logic   { background-color: #FF9644; }
+.exercise-block__badge--bia     { background-color: #FF9644; }
 
 /* Instruction */
 .exercise-block__instruction {
     font-size: 0.82rem;
-    color: #777;
+    color: rgba(86, 47, 0, 0.7);
     font-style: italic;
     padding: 0 20px 12px;
     margin: 0;
@@ -57,15 +57,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: #f5f5f5;
-    border: 1px solid #ddd;
+    background: #FFFDF1;
+    border: 1px solid #FFCE99;
     border-radius: 5px;
     padding: 9px 14px;
     cursor: grab;
     user-select: none;
     transition: background 0.15s, box-shadow 0.15s;
     font-size: 0.88rem;
-    color: #333;
+    color: #562F00;
 }
 
 .exercise-block__item:active {
@@ -77,14 +77,14 @@
 }
 
 .exercise-block__item.drag-over {
-    background: #e8f0fe;
-    border-color: #1a73e8;
-    box-shadow: 0 0 0 2px rgba(26,115,232,0.3);
+    background: #FFCE99;
+    border-color: #FF9644;
+    box-shadow: 0 0 0 2px rgba(255, 150, 68, 0.35);
 }
 
 .exercise-block__item-num {
     font-size: 0.75rem;
-    color: #999;
+    color: rgba(86, 47, 0, 0.55);
     min-width: 22px;
 }
 
@@ -92,7 +92,7 @@
 .exercise-block__actions {
     display: flex;
     gap: 0;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #FFCE99;
 }
 
 .exercise-block__btn {
@@ -106,31 +106,31 @@
 }
 
 .exercise-block__btn--check {
-    background: #1a73e8;
-    color: #fff;
+    background: #FF9644;
+    color: #FFFDF1;
 }
 
 .exercise-block__btn--check:hover {
-    background: #1558b0;
+    background: #562F00;
 }
 
 .exercise-block__btn--view {
-    background: #fff;
-    color: #1a73e8;
-    border-left: 1px solid #e0e0e0;
+    background: #FFFDF1;
+    color: #FF9644;
+    border-left: 1px solid #FFCE99;
 }
 
 .exercise-block__btn--view:hover {
-    background: #f0f4ff;
+    background: #FFCE99;
 }
 
 /* Answer panel */
 .exercise-block__answer {
-    background: #f8f9fa;
-    border-top: 1px solid #e0e0e0;
+    background: #FFFDF1;
+    border-top: 1px solid #FFCE99;
     padding: 14px 20px;
     font-size: 0.85rem;
-    color: #444;
+    color: #562F00;
     line-height: 1.7;
 }
 
@@ -138,7 +138,7 @@
     margin: 0 0 8px;
     font-size: 0.88rem;
     font-weight: 700;
-    color: #222;
+    color: #562F00;
 }
 
 .exercise-block__answer ol {
@@ -157,5 +157,5 @@
     font-weight: 600;
 }
 
-.exercise-block__result--correct { color: #27ae60; }
-.exercise-block__result--wrong   { color: #e74c3c; }
+.exercise-block__result--correct { color: #FF9644; }
+.exercise-block__result--wrong   { color: #FF9644; }
