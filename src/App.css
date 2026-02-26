@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 .App-logo {
@@ -22,10 +23,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  animation: slideInDown 0.8s ease forwards;
 }
 
 .App-link {
   color: #61dafb;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.App-link:hover {
+  color: #64dbf7;
+  text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +43,67 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
