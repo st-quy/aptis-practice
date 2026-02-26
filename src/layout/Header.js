@@ -1,37 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { Layout, Menu, Typography } from 'antd';
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Layout, Menu, Flex, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
 
+
+
 const AppHeader = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navItems = [
-    { key: 'home', label: 'Trang Chủ' },
-    { key: 'intro', label: 'Giới thiệu' },
-    { key: 'vocab', label: 'Từ Vựng' },
-    { key: 'reading', label: 'Reading' },
-    { key: 'listening', label: 'Listening' },
-    { key: 'writingpart1', label: 'Writing' },
-    { key: 'speaking', label: 'Speaking' },
+    { key: 'home', label: <Link to="/">Trang Chủ</Link> },
+    { key: '/about', label: <Link to="/about">Giới thiệu</Link> },
+    { key: '/vocab', label: <Link to="/vocab">Từ Vựng</Link> },
+    { key: '/reading-part1', label: <Link to="/reading-part1">Reading</Link> },
+    { key: '/listening-part1', label: <Link to="/listening-part1">Listening</Link> },
+    { key: '/writing-part1', label: <Link to="/writing-part1">Writing</Link> },
+    { key: '/speaking-part1', label: <Link to="/speaking-part1">Speaking</Link> },
   ];
 
-  const getSelectedFromPath = () => {
-    const p = window.location.pathname.replace(/^\//, '');
-    return p === '' ? 'home' : p;
+  const handleMenuClick = ({ key }) => {
+    navigate(key);
   };
-
-  const [selected, setSelected] = useState(getSelectedFromPath());
-
-  useEffect(() => {
-    const onPop = () => setSelected(getSelectedFromPath());
-    window.addEventListener('popstate', onPop);
-    return () => window.removeEventListener('popstate', onPop);
-  }, []);
 
   return (
     <AntHeader style={{ background: '#FFCE99', padding: '0 20px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
-        <div className="logo">
+      <Flex justify="space-between" align="center" style={{ height: '100%' }}>
+        {/* Logo Section */}
+        <div className="logo" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
           <Title level={4} style={{ margin: 0, color: '#562F00' }}>
             APTIS LOGO
           </Title>
@@ -39,20 +38,14 @@ const AppHeader = () => {
 
         <Menu
           mode="horizontal"
+          selectedKeys={[location.pathname]}
           items={navItems}
-          onClick={(e) => {
-            const key = e.key === 'home' ? '/' : `/${e.key}`;
-            window.history.pushState({}, '', key);
-            setSelected(e.key);
-            // also dispatch a popstate-like event for listeners
-            window.dispatchEvent(new PopStateEvent('popstate'));
-          }}
-          selectedKeys={[selected]}
+          onClick={handleMenuClick}
           style={{
             background: 'transparent',
             borderBottom: 'none',
             minWidth: 600,
-            justifyContent: 'end'
+            justifyContent: 'end',
           }}
           disabledOverflow
         />

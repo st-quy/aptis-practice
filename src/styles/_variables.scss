@@ -1,11 +1,12 @@
-// Your Brand Palette
-$milk-white: #FFFDF1;
-$light-orange: #FFCE99;
-$brand-orange: #FF9644;
-$deep-brown: #562F00;
+// --- High-Spec Color Variables ---
+$color-main-white: #FFFDF1; // White Milk Handshake
+$color-orange-light: #FFCE99;
+$color-orange-main: #FF9644;
+$color-brown-dark: #562F00;
 
-// Usage Example:
-body {
-  background-color: $milk-white;
-  color: $deep-brown;
+:root {
+  --color-main-white: #{$color-main-white};
+  --color-orange-light: #{$color-orange-light};
+  --color-orange-main: #{$color-orange-main};
+  --color-brown-dark: #{$color-brown-dark};
 }
