@@ -6,27 +6,13 @@ import AppFooter from './layout/Footer';
 import About from './pages/About/About';
 import ListeningPart1 from './pages/Listening/ListeningPart1';
 import ReadingPart1 from './pages/Reading/ReadingPart1';
+import WritingPart1 from './pages/Writing/WritingPart1';
 import './styles/main.scss';
-import WritingPart1 from './pages/WritingPart1';
+
 
 const { Content } = Layout;
 
-
-
 function App() {
-  const getPageFromPath = () => {
-    const p = window.location.pathname.replace(/^\//, '');
-    return p === '' ? 'home' : p;
-  };
-
-  const [page, setPage] = useState(getPageFromPath());
-
-  useEffect(() => {
-    const onPop = () => setPage(getPageFromPath());
-    window.addEventListener('popstate', onPop);
-    return () => window.removeEventListener('popstate', onPop);
-  }, []);
-
   return (
     <Router>
       <ConfigProvider
@@ -52,6 +38,7 @@ function App() {
                   </div>
                 }
               />
+              <Route path="/writing-part1" element={<WritingPart1 />} />
               <Route path="/about" element={<About />} />
               <Route path="/reading-part1" element={<ReadingPart1 />} />
               <Route path="/listening-part1" element={<ListeningPart1 />} />

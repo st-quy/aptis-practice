@@ -13,7 +13,7 @@ const AppHeader = () => {
   const location = useLocation();
 
   const navItems = [
-    { key: 'home', label: <Link to="/">Trang Chủ</Link> },
+    { key: '/home', label: <Link to="/">Trang Chủ</Link> },
     { key: '/about', label: <Link to="/about">Giới thiệu</Link> },
     { key: '/vocab', label: <Link to="/vocab">Từ Vựng</Link> },
     { key: '/reading-part1', label: <Link to="/reading-part1">Reading</Link> },
@@ -49,7 +49,7 @@ const AppHeader = () => {
           }}
           disabledOverflow
         />
-      </div>
+      </Flex>
     </AntHeader>
   );
 };

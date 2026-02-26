@@ -10,7 +10,7 @@ import {
   PlayCircleOutlined,
   BulbOutlined,
 } from '@ant-design/icons';
-import { writingPart1Data } from '../js/data-writing-part1';
+import { writingPart1Data } from '../../js/data-writing-part1';
 
 const { TextArea } = Input;
 const { Title, Paragraph, Text } = Typography;
