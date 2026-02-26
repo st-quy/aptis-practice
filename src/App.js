@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
 import AppFooter from './layout/Footer';
@@ -9,6 +9,7 @@ import ReadingPart1 from './pages/Reading/ReadingPart1';
 import WritingPart1 from './pages/Writing/WritingPart1';
 import Vocabulary from './pages/Vocabulary/Vocabulary';
 import SpeakingPart1 from './pages/Speaking/SpeakingPart1';
+import HomePage from './pages/HomePage/HomePage';
 import './styles/main.scss';
 
 
@@ -30,21 +31,15 @@ function App() {
 
         <Content style={{ flex: 1, background: '#FFFDF1' }}>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="page-content" style={{ padding: '24px' }}>
-                  <h1>Welcome to the Aptis Practice Portal</h1>
-                  <p>Select a skill from the menu to get started.</p>
-                </div>
-              }
-            />
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/speaking-part1" element={<SpeakingPart1 />} />
             <Route path="/vocabulary" element={<Vocabulary />} />
             <Route path="/writing-part1" element={<WritingPart1 />} />
             <Route path="/about" element={<About />} />
             <Route path="/reading-part1" element={<ReadingPart1 />} />
             <Route path="/listening-part1" element={<ListeningPart1 />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Content>
 

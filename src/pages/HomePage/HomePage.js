@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'antd';
-import './HomePage.scss';
+import '../../styles/HomePage.scss';
 
 // ── Card data per tab ──
 
