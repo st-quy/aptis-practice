@@ -12,8 +12,8 @@ const AppHeader = () => {
     { key: 'home', label: <Link to="/">Trang Chủ</Link> },
     { key: 'intro', label: 'Giới thiệu' },
     { key: 'vocab', label: 'Từ Vựng' },
-    { key: 'reading', label: 'Reading' },
-    { key: 'listening', label: <Link to="/listening-part1">Listening</Link> },
+    { key: 'reading', label: <Link to="/reading-part1">Reading</Link> },
+    { key: 'listening', label: 'Listening' },
     { key: 'writing', label: 'Writing' },
     { key: 'speaking', label: 'Speaking' },
   ];
