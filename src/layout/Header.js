@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Layout, Menu, Flex, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +9,9 @@ const { Title } = Typography;
 
 
 const AppHeader = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navItems = [
     { key: 'home', label: <Link to="/">Trang Chủ</Link> },
     { key: 'intro', label: 'Giới thiệu' },
@@ -18,11 +22,15 @@ const AppHeader = () => {
     { key: 'speaking', label: 'Speaking' },
   ];
 
+  const handleMenuClick = ({ key }) => {
+    navigate(key);
+  };
+
   return (
     <AntHeader style={{ background: '#FFCE99', padding: '0 20px' }}>
       <Flex justify="space-between" align="center" style={{ height: '100%' }}>
         {/* Logo Section */}
-        <div className="logo">
+        <div className="logo" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
           <Title level={4} style={{ margin: 0, color: '#562F00' }}>
             APTIS LOGO
           </Title>
@@ -31,14 +39,16 @@ const AppHeader = () => {
         {/* Navigation Section */}
         <Menu
           mode="horizontal"
+          selectedKeys={[location.pathname]}
           items={navItems}
+          onClick={handleMenuClick}
           style={{
             background: 'transparent',
             borderBottom: 'none',
             minWidth: 600,
-            justifyContent: 'end'
+            justifyContent: 'end',
           }}
-          disabledOverflow // Keeps items from hiding in a "..." menu
+          disabledOverflow
         />
       </Flex>
     </AntHeader>
