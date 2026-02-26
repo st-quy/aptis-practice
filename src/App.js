@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
 import AppFooter from './layout/Footer';
 import './styles/main.scss';
+import WritingPart1 from './pages/WritingPart1';
 
 const { Content } = Layout;
 
 function App() {
+  const getPageFromPath = () => {
+    const p = window.location.pathname.replace(/^\//, '');
+    return p === '' ? 'home' : p;
+  };
+
+  const [page, setPage] = useState(getPageFromPath());
+
+  useEffect(() => {
+    const onPop = () => setPage(getPageFromPath());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
   return (
     <ConfigProvider
       theme={{
@@ -22,10 +36,15 @@ function App() {
         <AppHeader />
 
         <Content style={{ flex: 1, background: '#FFFDF1', padding: '24px' }}>
-          {/* This is where your individual pages will render later */}
           <div className="page-content">
-            <h1>Welcome to the Aptis Practice Portal</h1>
-            <p>Select a skill from the menu to get started.</p>
+            {page === 'writingpart1' ? (
+              <WritingPart1 />
+            ) : (
+              <div>
+                <h1>Welcome to the Aptis Practice Portal</h1>
+                <p>Select a skill from the menu to get started.</p>
+              </div>
+            )}
           </div>
         </Content>
 
