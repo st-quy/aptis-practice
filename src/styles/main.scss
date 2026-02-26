@@ -3,8 +3,43 @@
 
 // Import your variables
 @import 'variables';
+@import "@fontsource/be-vietnam-pro"; // Defaults to weight 400
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --secondary-color: #f8f9fa;
+    --background-color: #f4f7f9;
+    --text-color: #333;
+    --border-color: #dee2e6;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    --card-radius: 12px;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #f4f7f9;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-intro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.page-intro h1 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.page-intro p {
+    color: #7f8c8d;
+    font-size: 1.1em;
 }
