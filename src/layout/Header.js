@@ -1,16 +1,19 @@
 import React from 'react';
 import { Layout, Menu, Flex, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
 
+
+
 const AppHeader = () => {
   const navItems = [
-    { key: 'home', label: 'Trang Chủ' },
+    { key: 'home', label: <Link to="/">Trang Chủ</Link> },
     { key: 'intro', label: 'Giới thiệu' },
     { key: 'vocab', label: 'Từ Vựng' },
     { key: 'reading', label: 'Reading' },
-    { key: 'listening', label: 'Listening' },
+    { key: 'listening', label: <Link to="/listening-part1">Listening</Link> },
     { key: 'writing', label: 'Writing' },
     { key: 'speaking', label: 'Speaking' },
   ];

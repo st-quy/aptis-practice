@@ -3,8 +3,12 @@ import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
 import AppFooter from './layout/Footer';
 import './styles/main.scss';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ListeningPart1 from './pages/Listening/ListeningPart1';
 
 const { Content } = Layout;
+
+
 
 function App() {
   return (
@@ -13,24 +17,29 @@ function App() {
         token: {
           colorPrimary: '#FF9644',
           colorTextBase: '#562F00',
-          // Customizing Menu colors to match your theme
           colorItemBgSelected: '#FFCE99',
         },
       }}
     >
-      <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <AppHeader />
+      <Router>
+        <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <AppHeader />
 
-        <Content style={{ flex: 1, background: '#FFFDF1', padding: '24px' }}>
-          {/* This is where your individual pages will render later */}
-          <div className="page-content">
-            <h1>Welcome to the Aptis Practice Portal</h1>
-            <p>Select a skill from the menu to get started.</p>
-          </div>
-        </Content>
+          <Content style={{ flex: 1, background: '#FFFDF1', padding: '24px' }}>
+            <Routes>
+              <Route path="/" element={
+                <div className="page-content">
+                  <h1>Welcome to the Aptis Practice Portal</h1>
+                  <p>Select a skill from the menu to get started.</p>
+                </div>
+              } />
+              <Route path="/listening-part1" element={<ListeningPart1 />} />
+            </Routes>
+          </Content>
 
-        <AppFooter />
-      </Layout>
+          <AppFooter />
+        </Layout>
+      </Router>
     </ConfigProvider>
   );
 }
