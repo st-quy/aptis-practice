@@ -4,9 +4,13 @@ import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
 import AppFooter from './layout/Footer';
 import About from './pages/About/About';
+import ListeningPart1 from './pages/Listening/ListeningPart1';
+import ReadingPart1 from './pages/Reading/ReadingPart1';
 import './styles/main.scss';
 
 const { Content } = Layout;
+
+
 
 function App() {
   return (
@@ -35,6 +39,8 @@ function App() {
                 }
               />
               <Route path="/about" element={<About />} />
+              <Route path="/reading-part1" element={<ReadingPart1 />} />
+              <Route path="/listening-part1" element={<ListeningPart1 />} />
             </Routes>
           </Content>
 

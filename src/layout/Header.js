@@ -1,22 +1,25 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Layout, Menu, Flex, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
+
+
 
 const AppHeader = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const navItems = [
-    { key: '/', label: 'Trang Chủ' },
-    { key: '/about', label: 'Giới thiệu' },
-    { key: '/vocab', label: 'Từ Vựng' },
-    { key: '/reading', label: 'Reading' },
-    { key: '/listening', label: 'Listening' },
-    { key: '/writing', label: 'Writing' },
-    { key: '/speaking', label: 'Speaking' },
+    { key: 'home', label: <Link to="/">Trang Chủ</Link> },
+    { key: 'intro', label: 'Giới thiệu' },
+    { key: 'vocab', label: 'Từ Vựng' },
+    { key: 'reading', label: <Link to="/reading-part1">Reading</Link> },
+    { key: 'listening', label: <Link to="/listening-part1">Listening</Link> },
+    { key: 'writing', label: 'Writing' },
+    { key: 'speaking', label: 'Speaking' },
   ];
 
   const handleMenuClick = ({ key }) => {
