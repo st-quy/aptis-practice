@@ -1,0 +1,183 @@
+// ColorHunt Palette: https://colorhunt.co/palette/fffdf1ffce99ff9644562f00
+$bg-cream: #fffdf1;
+$light-orange: #ffce99;
+$primary-orange: #ff9644;
+$dark-brown: #562f00;
+
+$border-radius: 12px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $bg-cream;
+  color: $dark-brown;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+}
+
+.header {
+  padding: 16px 0 0;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-orange;
+    margin-bottom: 12px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    border-bottom: 1px solid $light-orange;
+    padding-bottom: 8px;
+
+    .nav-link {
+      color: $dark-brown;
+      text-decoration: none;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: $primary-orange;
+      }
+
+      &.active {
+        color: $primary-orange;
+        font-weight: 500;
+        border-bottom: 2px solid $primary-orange;
+        padding-bottom: 2px;
+        margin-bottom: -10px;
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 32px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: $dark-brown !important;
+  margin-bottom: 8px !important;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: $dark-brown;
+  opacity: 0.85;
+  font-size: 1rem;
+  margin-bottom: 28px !important;
+}
+
+.box {
+  border-radius: $border-radius;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+
+  .box-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $dark-brown;
+
+    .box-icon {
+      color: $primary-orange;
+      font-size: 1.2rem;
+    }
+  }
+
+  .box-intro {
+    margin-bottom: 14px !important;
+    color: $dark-brown;
+  }
+
+  .steps-list {
+    margin: 0 0 0 18px;
+    padding: 0;
+    color: $dark-brown;
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.method-box {
+  background: rgba($light-orange, 0.25);
+  border: 2px solid $light-orange;
+  box-shadow: 4px 4px 0 $light-orange;
+}
+
+.strategy-box {
+  background: rgba($light-orange, 0.15);
+  border: 2px solid $primary-orange;
+}
+
+.action-section {
+  margin: 28px 0;
+  display: flex;
+  justify-content: center;
+
+  .start-btn {
+    height: 44px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 1rem;
+    background: $primary-orange !important;
+    border-color: $primary-orange !important;
+
+    &:hover:not(:disabled) {
+      background: $dark-brown !important;
+      border-color: $dark-brown !important;
+    }
+  }
+}
+
+.practice-block {
+  margin-top: 24px;
+  padding: 20px;
+  background: #fff;
+  border-radius: $border-radius;
+  border: 2px solid $light-orange;
+  box-shadow: 4px 4px 0 rgba($light-orange, 0.5);
+
+  .question-label {
+    font-size: 0.9rem;
+    color: $dark-brown;
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+
+  .question-text {
+    font-size: 1.15rem;
+    color: $dark-brown;
+  }
+
+  .done-msg {
+    margin-top: 16px !important;
+    color: $primary-orange;
+    font-weight: 500;
+  }
+}
+
+.help-float {
+  .ant-float-btn-body {
+    background: $primary-orange !important;
+  }
+}
