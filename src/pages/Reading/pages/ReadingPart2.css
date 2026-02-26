@@ -9,13 +9,13 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #222;
+    color: #562F00;
     margin: 0 0 6px;
 }
 
 .reading-part2__page-sub {
     text-align: center;
     font-size: 0.875rem;
-    color: #888;
+    color: rgba(86, 47, 0, 0.62);
     margin: 0 0 28px;
 }

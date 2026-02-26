@@ -1,10 +1,10 @@
 /* ===== FOOTER ===== */
 .footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid #e0e0e0;
+    background-color: #FFFDF1;
+    border-top: 1px solid #FFCE99;
     padding: 40px 20px 0;
     font-size: 0.875rem;
-    color: #444;
+    color: #562F00;
 }
 
 .footer__inner {
@@ -20,14 +20,14 @@
 .footer__brand-logo {
     font-size: 1.15rem;
     font-weight: 700;
-    color: #1a73e8;
+    color: #FF9644;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 10px;
 }
 
 .footer__brand-desc {
-    color: #666;
+    color: rgba(86, 47, 0, 0.78);
     line-height: 1.65;
     font-size: 0.82rem;
 }
@@ -36,7 +36,7 @@
 .footer__heading {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #222;
+    color: #562F00;
     margin-bottom: 14px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .footer__links li a {
-    color: #555;
+    color: rgba(86, 47, 0, 0.86);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@
 }
 
 .footer__links li a:hover {
-    color: #1a73e8;
+    color: #FF9644;
 }
 
 .footer__links li a .link-icon {
@@ -79,7 +79,7 @@
 }
 
 .footer__skills li a {
-    color: #555;
+    color: rgba(86, 47, 0, 0.86);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@
 }
 
 .footer__skills li a:hover {
-    color: #1a73e8;
+    color: #FF9644;
 }
 
 .skill-badge {
@@ -99,13 +99,13 @@
     border-radius: 12px;
     font-size: 0.78rem;
     font-weight: 600;
-    color: #fff;
+    color: #FFFDF1;
 }
 
-.skill-badge--reading   { background-color: #e67e22; }
-.skill-badge--listening { background-color: #8e44ad; }
-.skill-badge--writing   { background-color: #27ae60; }
-.skill-badge--speaking  { background-color: #2980b9; }
+.skill-badge--reading   { background-color: #FF9644; }
+.skill-badge--listening { background-color: #562F00; }
+.skill-badge--writing   { background-color: #FF9644; }
+.skill-badge--speaking  { background-color: #FF9644; }
 
 /* Column 4 – Info */
 .footer__info {
@@ -121,7 +121,7 @@
     display: flex;
     align-items: flex-start;
     gap: 7px;
-    color: #555;
+    color: rgba(86, 47, 0, 0.86);
     font-size: 0.82rem;
     line-height: 1.5;
 }
@@ -129,17 +129,17 @@
 .footer__info li .info-icon {
     margin-top: 2px;
     flex-shrink: 0;
-    color: #1a73e8;
+    color: #FF9644;
     font-size: 0.85rem;
 }
 
 /* Bottom bar */
 .footer__bottom {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #FFCE99;
     text-align: center;
     padding: 14px 20px;
     font-size: 0.78rem;
-    color: #888;
+    color: rgba(86, 47, 0, 0.62);
 }
 
 /* Responsive */

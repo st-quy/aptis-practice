@@ -20,7 +20,7 @@ function MethodExplanation() {
                 <p className="method-box__example-title">
                     Ví dụ "Câu chuyện Logic" (Chủ đề: Tham quan triển lãm):
                 </p>
-                <p style={{ marginBottom: '4px', fontSize: '0.82rem', color: '#666' }}>
+                <p style={{ marginBottom: '4px', fontSize: '0.82rem', color: 'rgba(86, 47, 0, 0.78)' }}>
                     Dưới đây là các câu đã được sắp xếp theo đúng thứ tự logic của một quy trình:
                 </p>
 
@@ -44,7 +44,7 @@ function MethodExplanation() {
                 <p className="method-box__example-title">
                     Ví dụ "Câu chuyện Bia" (Chủ đề: Tờ rơi ăn chạy – Key: 1-2-3-4-5):
                 </p>
-                <p style={{ marginBottom: '6px', fontSize: '0.82rem', color: '#666' }}>
+                <p style={{ marginBottom: '6px', fontSize: '0.82rem', color: 'rgba(86, 47, 0, 0.78)' }}>
                     Hãy xem cách chúng ta tạo ra câu chuyện "bia" từ những từ đầu tiên của các câu gốc
                     (lấy từ chủ đề "Mua nhà"):
                 </p>
