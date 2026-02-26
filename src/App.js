@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ConfigProvider, Layout } from 'antd';
 import AppHeader from './layout/Header';
 import AppFooter from './layout/Footer';
-import ReadingPart1 from './pages/ReadingPart1/ReadingPart1';
+import ReadingPart1 from './pages/Reading/ReadingPart1';
 import './styles/main.scss';
 
 const { Content } = Layout;
@@ -34,7 +34,7 @@ function App() {
                   </div>
                 }
               />
-              <Route path="/reading_part1" element={<ReadingPart1 />} />
+              <Route path="/reading-part1" element={<ReadingPart1 />} />
             </Routes>
           </Content>
 
