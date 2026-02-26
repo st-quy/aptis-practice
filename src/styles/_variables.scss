@@ -1,0 +1,12 @@
+// --- High-Spec Color Variables ---
+$color-main-white: #FFFDF1; // White Milk Handshake
+$color-orange-light: #FFCE99;
+$color-orange-main: #FF9644;
+$color-brown-dark: #562F00;
+
+:root {
+  --color-main-white: #{$color-main-white};
+  --color-orange-light: #{$color-orange-light};
+  --color-orange-main: #{$color-orange-main};
+  --color-brown-dark: #{$color-brown-dark};
+}
