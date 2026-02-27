@@ -1,0 +1,8 @@
+@import 'variables';
+
+.reading-container {
+    @extend %page-container;
+}
+
+// Any specific styles for Part 2 can go here, 
+// but many are already handled by global page-intro and %page-container.
