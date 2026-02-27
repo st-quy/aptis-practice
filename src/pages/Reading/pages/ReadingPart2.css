@@ -1,0 +1,21 @@
+/* ===== READING PART 2 PAGE ===== */
+.reading-part2 {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+}
+
+.reading-part2__page-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #562F00;
+    margin: 0 0 6px;
+}
+
+.reading-part2__page-sub {
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(86, 47, 0, 0.62);
+    margin: 0 0 28px;
+}
