@@ -12,6 +12,7 @@ import Vocabulary from './pages/Vocabulary/Vocabulary';
 import SpeakingPart1 from './pages/Speaking/SpeakingPart1';
 import HomePage from './pages/HomePage/HomePage';
 import Faq from './pages/Faq/Faq';
+import Structure from './pages/Structure/structure';
 import './styles/main.scss';
 
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/reading-part2" element={<ReadingPart2 />} />
             <Route path="/listening-part1" element={<ListeningPart1 />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/structure" element={<Structure />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Content>

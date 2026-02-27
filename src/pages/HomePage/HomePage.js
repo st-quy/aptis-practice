@@ -8,7 +8,7 @@ const { Title, Text } = Typography;
 // ── Card data per tab ──
 
 const guideCards = [
-  { title: 'Giới thiệu', desc: 'Cấu trúc bài thi Aptis ESOL', path: '/about' },
+  { title: 'Cấu trúc bài thi Aptis ESOL', desc: 'Tổng quan các phần thi, thời gian và hình thức làm bài', path: '/structure' },
   { title: 'Giới thiệu trang web', desc: 'Hướng dẫn sử dụng web ôn tập', path: '/about' },
   { title: 'Tổng hợp Từ vựng', desc: 'Từ vựng theo chủ đề Nơi chốn và Con người', path: '/vocabulary' },
   { title: 'Những điều cần nhớ', desc: 'Lời khuyên giúp bạn tự tin và làm bài tốt' },
