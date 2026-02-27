@@ -11,6 +11,7 @@ import WritingPart1 from './pages/Writing/WritingPart1';
 import Vocabulary from './pages/Vocabulary/Vocabulary';
 import SpeakingPart1 from './pages/Speaking/SpeakingPart1';
 import HomePage from './pages/HomePage/HomePage';
+import Faq from './pages/Faq/Faq';
 import './styles/main.scss';
 
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/reading-part1" element={<ReadingPart1 />} />
             <Route path="/reading-part2" element={<ReadingPart2 />} />
             <Route path="/listening-part1" element={<ListeningPart1 />} />
+            <Route path="/faq" element={<Faq />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Content>

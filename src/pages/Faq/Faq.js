@@ -92,22 +92,25 @@ const FAQ_ITEMS = [
 
 export default function Faq() {
   return (
-    <div className="faq-page">
-      <div className="faq-container">
-        <div className="page-intro">
-          <Title level={2} className="page-title">
-            Câu Hỏi Thường Gặp (FAQ)
-          </Title>
-          <Paragraph className="page-subtitle">
-            Giải đáp các thắc mắc phổ biến về chức năng và phương pháp học trên trang web.
-          </Paragraph>
-        </div>
+    <div className="reading-container" style={{ paddingBottom: '80px' }}>
+      <div className="page-intro">
+        <Title level={1} className="page-intro__title">
+          Câu Hỏi Thường Gặp (FAQ)
+        </Title>
+        <Paragraph className="page-intro__subtitle">
+          Giải đáp các thắc mắc phổ biến về chức năng và phương pháp học trên trang web.
+        </Paragraph>
+      </div>
 
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <Collapse
-          className="faq-collapse"
           accordion
           bordered={false}
           items={FAQ_ITEMS}
+          expandIconPosition="end"
+          style={{ 
+            background: 'transparent',
+          }}
         />
       </div>
     </div>
