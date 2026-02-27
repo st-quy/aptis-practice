@@ -1,0 +1,71 @@
+/* src/styles/vocabulary.css */
+@import 'variables';
+
+.vocabulary-container {
+  @extend %page-container;
+}
+
+.vocab-section {
+  margin-bottom: 40px;
+}
+
+.vocab-section h2 {
+  font-size: 1.5rem;
+  color: $color-brand-brown;
+  border-bottom: 2px solid $color-brand-orange;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.vocab-table-card {
+  @extend %content-card;
+  overflow-x: auto;
+}
+
+.vocab-table-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: $color-brand-brown;
+  font-weight: 600;
+}
+
+.structure-guide {
+  background-color: $color-gray-2;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: -10px 0 15px 0;
+  font-size: 0.9em;
+}
+
+.structure-guide code {
+  font-weight: bold;
+  color: $color-gray-8;
+  font-family: 'Courier New', monospace;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .vocab-table-card {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 0.85em;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  .page-intro h1 {
+    font-size: 1.8em;
+  }
+
+  .page-intro p {
+    font-size: 0.95em;
+  }
+}
+
+
