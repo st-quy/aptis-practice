@@ -1,4 +1,4 @@
-import './MethodExplanation.css';
+import './MethodExplanation.scss';
 
 /**
  * MethodExplanation

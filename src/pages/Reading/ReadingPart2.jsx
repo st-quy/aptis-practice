@@ -1,6 +1,9 @@
-import ExerciseBlock from '../../../components/ExerciseBlock/ExerciseBlock';
-import MethodExplanation from '../components/MethodExplanation';
-import './ReadingPart2.css';
+import { Typography } from 'antd';
+import ExerciseBlock from '../../components/ExerciseBlock/ExerciseBlock';
+import MethodExplanation from '../../components/MethodExplanation';
+import '../../styles/ReadingPart2.scss';
+
+const { Title, Paragraph } = Typography;
 
 /* ──────────────────────────────────────────────────────────
    Dữ liệu bài tập – mỗi object tương ứng một ExerciseBlock
@@ -139,9 +142,11 @@ const exercises = [
 ─────────────────────────────────────────────────────────── */
 function ReadingPart2() {
     return (
-        <div className="reading-part2">
-            <h1 className="reading-part2__page-title">Reading – Part 2</h1>
-            <p className="reading-part2__page-sub">Luyện tập các câu hỏi của Part 2</p>
+        <div className="reading-container">
+            <div className="page-intro">
+                <Title level={1} className="page-intro__title">Reading – Part 2</Title>
+                <Paragraph className="page-intro__subtitle">Luyện tập các câu hỏi của Part 2</Paragraph>
+            </div>
 
             {/* Phương pháp học */}
             <MethodExplanation />

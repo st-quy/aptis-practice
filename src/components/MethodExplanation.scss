@@ -1,20 +1,22 @@
+@import '../styles/variables';
+
 /* ===== METHOD EXPLANATION ===== */
 .method-box {
-    background: #FFFDF1;
-    border: 1px solid #FFCE99;
-    border-left: 4px solid #FF9644;
+    background: $color-brand-white;
+    border: 1px solid $color-brand-orange-light;
+    border-left: 4px solid $color-brand-orange;
     border-radius: 6px;
     padding: 18px 22px;
     margin-bottom: 32px;
     font-size: 0.875rem;
-    color: #562F00;
+    color: $color-brand-brown;
     line-height: 1.65;
 }
 
 .method-box__heading {
     font-size: 1rem;
     font-weight: 700;
-    color: #FF9644;
+    color: $color-brand-orange;
     margin: 0 0 12px;
     display: flex;
     align-items: center;
@@ -31,16 +33,16 @@
 
 .method-box__label {
     font-weight: 700;
-    color: #562F00;
+    color: $color-brand-brown;
 }
 
-.method-box__label--orange { color: #FF9644; }
-.method-box__label--blue   { color: #FF9644; }
+.method-box__label--orange { color: $color-brand-orange; }
+.method-box__label--blue   { color: $color-brand-orange; }
 
 .method-box__example-title {
     font-style: italic;
     font-weight: 600;
-    color: rgba(86, 47, 0, 0.86);
+    color: rgba($color-brand-brown, 0.86);
     margin: 6px 0 4px;
 }
 
@@ -55,7 +57,7 @@
 
 .method-box__ordered li strong {
     font-style: italic;
-    color: #FF9644;
+    color: $color-brand-orange;
 }
 
 .method-box__bullets {
@@ -75,35 +77,35 @@
 }
 
 .method-box__bullets li::before {
-    content: '•';
-    color: #FF9644;
+    content: 'â€¢';
+    color: $color-brand-orange;
     flex-shrink: 0;
     margin-top: 1px;
 }
 
 .method-box__bullets li em {
-    color: #FF9644;
+    color: $color-brand-orange;
     font-weight: 600;
     font-style: normal;
 }
 
 .method-box__key {
-    background: #FFCE99;
-    border: 1px solid #FF9644;
+    background: $color-brand-orange-light;
+    border: 1px solid $color-brand-orange;
     border-radius: 4px;
     padding: 2px 7px;
     font-weight: 700;
     font-size: 0.78rem;
-    color: #562F00;
+    color: $color-brand-brown;
 }
 
 .method-box blockquote {
     margin: 6px 0 0 0;
     padding: 8px 14px;
-    background: #FFCE99;
-    border-left: 3px solid #FF9644;
+    background: $color-brand-orange-light;
+    border-left: 3px solid $color-brand-orange;
     border-radius: 3px;
     font-style: italic;
     font-size: 0.83rem;
-    color: #562F00;
+    color: $color-brand-brown;
 }

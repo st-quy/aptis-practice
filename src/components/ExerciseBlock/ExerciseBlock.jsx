@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import './ExerciseBlock.css';
+import './ExerciseBlock.scss';
 
 /**
  * ExerciseBlock – Shared drag-and-drop sentence ordering component

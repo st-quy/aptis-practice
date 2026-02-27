@@ -16,7 +16,14 @@ const AppHeader = () => {
     { key: '/home', label: <Link to="/">Trang Chủ</Link> },
     { key: '/about', label: <Link to="/about">Giới thiệu</Link> },
     { key: '/vocabulary', label: <Link to="/vocabulary">Từ Vựng</Link> },
-    { key: '/reading-part1', label: <Link to="/reading-part1">Reading</Link> },
+    { 
+      key: '/reading', 
+      label: 'Reading',
+      children: [
+        { key: '/reading-part1', label: <Link to="/reading-part1">Reading Part 1</Link> },
+        { key: '/reading-part2', label: <Link to="/reading-part2">Reading Part 2</Link> },
+      ]
+    },
     { key: '/listening-part1', label: <Link to="/listening-part1">Listening</Link> },
     { key: '/writing-part1', label: <Link to="/writing-part1">Writing</Link> },
     { key: '/speaking-part1', label: <Link to="/speaking-part1">Speaking</Link> },

@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 /* ===== EXERCISE BLOCK ===== */
 .exercise-block {
-    background: #FFFDF1;
-    border: 1px solid #FFCE99;
+    background: $color-brand-white;
+    border: 1px solid $color-brand-orange-light;
     border-radius: 8px;
     margin-bottom: 32px;
     overflow: hidden;
@@ -18,7 +20,7 @@
 .exercise-block__title {
     font-size: 1rem;
     font-weight: 700;
-    color: #562F00;
+    color: $color-brand-brown;
     margin: 0;
 }
 
@@ -27,17 +29,17 @@
     font-weight: 600;
     padding: 3px 10px;
     border-radius: 12px;
-    color: #FFFDF1;
+    color: $color-brand-white;
     white-space: nowrap;
 }
 
-.exercise-block__badge--logic   { background-color: #FF9644; }
-.exercise-block__badge--bia     { background-color: #FF9644; }
+.exercise-block__badge--logic   { background-color: $color-brand-orange; }
+.exercise-block__badge--bia     { background-color: $color-brand-orange; }
 
 /* Instruction */
 .exercise-block__instruction {
     font-size: 0.82rem;
-    color: rgba(86, 47, 0, 0.7);
+    color: rgba($color-brand-brown, 0.7);
     font-style: italic;
     padding: 0 20px 12px;
     margin: 0;
@@ -57,15 +59,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: #FFFDF1;
-    border: 1px solid #FFCE99;
+    background: $color-brand-white;
+    border: 1px solid $color-brand-orange-light;
     border-radius: 5px;
     padding: 9px 14px;
     cursor: grab;
     user-select: none;
     transition: background 0.15s, box-shadow 0.15s;
     font-size: 0.88rem;
-    color: #562F00;
+    color: $color-brand-brown;
 }
 
 .exercise-block__item:active {
@@ -77,14 +79,14 @@
 }
 
 .exercise-block__item.drag-over {
-    background: #FFCE99;
-    border-color: #FF9644;
-    box-shadow: 0 0 0 2px rgba(255, 150, 68, 0.35);
+    background: $color-brand-orange-light;
+    border-color: $color-brand-orange;
+    box-shadow: 0 0 0 2px rgba($color-brand-orange, 0.35);
 }
 
 .exercise-block__item-num {
     font-size: 0.75rem;
-    color: rgba(86, 47, 0, 0.55);
+    color: rgba($color-brand-brown, 0.55);
     min-width: 22px;
 }
 
@@ -92,7 +94,7 @@
 .exercise-block__actions {
     display: flex;
     gap: 0;
-    border-top: 1px solid #FFCE99;
+    border-top: 1px solid $color-brand-orange-light;
 }
 
 .exercise-block__btn {
@@ -106,31 +108,31 @@
 }
 
 .exercise-block__btn--check {
-    background: #FF9644;
-    color: #FFFDF1;
+    background: $color-brand-orange;
+    color: $color-brand-white;
 }
 
 .exercise-block__btn--check:hover {
-    background: #562F00;
+    background: $color-brand-brown;
 }
 
 .exercise-block__btn--view {
-    background: #FFFDF1;
-    color: #FF9644;
-    border-left: 1px solid #FFCE99;
+    background: $color-brand-white;
+    color: $color-brand-orange;
+    border-left: 1px solid $color-brand-orange-light;
 }
 
 .exercise-block__btn--view:hover {
-    background: #FFCE99;
+    background: $color-brand-orange-light;
 }
 
 /* Answer panel */
 .exercise-block__answer {
-    background: #FFFDF1;
-    border-top: 1px solid #FFCE99;
+    background: $color-brand-white;
+    border-top: 1px solid $color-brand-orange-light;
     padding: 14px 20px;
     font-size: 0.85rem;
-    color: #562F00;
+    color: $color-brand-brown;
     line-height: 1.7;
 }
 
@@ -138,7 +140,7 @@
     margin: 0 0 8px;
     font-size: 0.88rem;
     font-weight: 700;
-    color: #562F00;
+    color: $color-brand-brown;
 }
 
 .exercise-block__answer ol {
@@ -157,5 +159,5 @@
     font-weight: 600;
 }
 
-.exercise-block__result--correct { color: #FF9644; }
-.exercise-block__result--wrong   { color: #FF9644; }
+.exercise-block__result--correct { color: $color-brand-orange; }
+.exercise-block__result--wrong   { color: $color-brand-orange; }

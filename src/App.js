@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ConfigProvider, Layout } from 'antd';
@@ -7,6 +6,7 @@ import AppFooter from './layout/Footer';
 import About from './pages/About/About';
 import ListeningPart1 from './pages/Listening/ListeningPart1';
 import ReadingPart1 from './pages/Reading/ReadingPart1';
+import ReadingPart2 from './pages/Reading/ReadingPart2';
 import WritingPart1 from './pages/Writing/WritingPart1';
 import Vocabulary from './pages/Vocabulary/Vocabulary';
 import SpeakingPart1 from './pages/Speaking/SpeakingPart1';
@@ -40,6 +40,7 @@ function App() {
             <Route path="/writing-part1" element={<WritingPart1 />} />
             <Route path="/about" element={<About />} />
             <Route path="/reading-part1" element={<ReadingPart1 />} />
+            <Route path="/reading-part2" element={<ReadingPart2 />} />
             <Route path="/listening-part1" element={<ListeningPart1 />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
@@ -48,17 +49,6 @@ function App() {
         <AppFooter />
       </Layout>
     </ConfigProvider>
-=======
-
-import Layout from './layout/layout';
-import ReadingPart2 from './pages/Reading/pages/ReadingPart2';
-
-function App() {
-  return (
-    <Layout>
-      <ReadingPart2 />
-    </Layout>
->>>>>>> fbfe42a (Initial commit: React app with Reading Part 2 feature)
   );
 }
 
