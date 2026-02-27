@@ -1,0 +1,116 @@
+@import 'variables';
+
+.listening-part1 {
+  @extend %page-container;
+
+  .explanation-box {
+    @extend %content-card;
+    border-left: 5px solid $color-brand-orange;
+    text-align: left;
+
+    h3 {
+      color: $color-brand-brown;
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+      li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 1.6;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .quiz-card {
+    background-color: $color-white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: $shadow-lg;
+    margin-bottom: 24px;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid $color-brand-white;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+
+      h2 {
+        margin: 0;
+        color: $color-brand-brown;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .key-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid $color-gray-3;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .key-number {
+        width: 36px;
+        height: 36px;
+        background-color: $color-brand-orange-light;
+        color: $color-brand-brown;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-right: 20px;
+        flex-shrink: 0;
+        font-size: 1rem;
+      }
+
+      .answer-text {
+        font-size: 1.15rem;
+        color: $color-brand-brown;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &.hidden {
+          filter: blur(6px);
+          user-select: none;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid $color-brand-white;
+
+    .page-info {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $color-brand-brown;
+    }
+  }
+}

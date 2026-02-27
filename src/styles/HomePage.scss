@@ -1,0 +1,121 @@
+@import 'variables';
+
+.home-page {
+  @extend %page-container;
+
+  // ── Tabs Override ──
+  .ant-tabs {
+    .ant-tabs-nav {
+      justify-content: center;
+      margin-bottom: 28px;
+
+      &::before {
+        border-bottom: none;
+      }
+    }
+
+    .ant-tabs-tab {
+      font-size: 15px;
+      color: rgba($color-brand-brown, 0.55);
+      padding: 8px 0;
+      transition: color 0.25s;
+
+      &:hover {
+        color: $color-brand-orange;
+      }
+
+      &.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: $color-brand-orange;
+        font-weight: 600;
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      background: $color-brand-orange;
+      height: 3px;
+      border-radius: 3px;
+    }
+  }
+
+  // ── Card Grid ──
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // ── Individual Card ──
+  &__card {
+    background: $color-white;
+    border: 1.5px solid rgba($color-brand-orange-light, 0.5);
+    border-radius: 12px;
+    padding: 20px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, $color-brand-orange, $color-brand-orange-light);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      border-color: $color-brand-orange;
+      box-shadow: 0 6px 20px rgba($color-brand-orange, 0.15);
+      transform: translateY(-3px);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: $color-brand-orange;
+      margin-bottom: 8px;
+    }
+
+    &-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba($color-brand-brown, 0.7);
+      margin: 0;
+    }
+  }
+
+  // ── Highlight variant (red cards) ──
+  &__card--highlight {
+    border-left: 3px solid $color-danger;
+
+    .home-page__card-title {
+      color: $color-danger;
+    }
+
+    &:hover {
+      border-color: $color-danger;
+      border-left: 3px solid $color-danger;
+      box-shadow: 0 6px 20px rgba($color-danger, 0.15);
+    }
+
+    &::before {
+      background: linear-gradient(90deg, $color-danger, $color-danger-light);
+    }
+  }
+}

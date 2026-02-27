@@ -1,0 +1,88 @@
+@import 'variables';
+
+.reading-container {
+  @extend %page-container;
+
+  .instruction-card {
+    background-color: $color-warning-bg;
+    border-left: 4px solid $color-brand-orange;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+
+  .question-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid $color-gray-3;
+    border-radius: 12px;
+    transition: all 0.3s;
+    background: $color-white;
+
+    .q-text { font-size: 16px; margin-bottom: 15px; display: block; }
+
+    .opt-item {
+      border: 1px solid $color-gray-3;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      width: 100%;
+      &.is-answer { background: $color-success-bg; border-color: $color-success; font-weight: bold; }
+    }
+
+    &.correct { background-color: $color-success-bg; border-left: 6px solid $color-success; border-color: $color-success; }
+    &.incorrect { background-color: $color-error-bg; border-left: 6px solid $color-error; border-color: $color-error; }
+
+    .result-text { margin-top: 10px; font-weight: bold; }
+  }
+
+  .pagination-footer {
+    margin-top: 40px;
+    text-align: center;
+
+    .btn-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+
+      .num-btn {
+        width: 45px; height: 45px; border-radius: 8px; font-weight: bold;
+        border: 1px solid $color-gray-4;
+
+        &.active {
+          background-color: $color-brand-orange !important;
+          color: $color-white !important;
+          border-color: $color-brand-orange !important;
+        }
+        &:hover { color: $color-brand-orange; border-color: $color-brand-orange; }
+      }
+    }
+
+    .submit-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        .big-orange-btn {
+          width: 100% !important; // Buộc nút dài tràn khung
+          max-width: 800px;
+          height: 60px !important;
+          background-color: $color-brand-orange !important;
+          border: none !important;
+          border-radius: 12px;
+          font-size: 18px !important;
+          font-weight: bold;
+          color: $color-white;
+          box-shadow: 0 4px 10px rgba($color-brand-orange, 0.3);
+
+          &:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba($color-brand-orange, 0.4);
+          }
+        }
+    }
+  }
+}
