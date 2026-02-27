@@ -1,0 +1,33 @@
+@import 'variables';
+
+.page-wrapper {
+  background-color: $color-brand-white !important;
+  min-height: 100vh;
+}
+
+.high-spec-header {
+  background-color: $color-white !important;
+  border-bottom: 3px solid $color-brand-orange-light;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.main-content {
+  padding: 24px 50px;
+  background-color: $color-brand-white;
+}
+
+.high-spec-footer {
+  text-align: center;
+  background-color: $color-brand-brown !important;
+  color: $color-brand-white !important;
+  border-top: 4px solid $color-brand-orange;
+  padding: 24px 50px;
+}
+
+.content-container {
+  min-height: 280px;
+  padding: 24px;
+  background: transparent;
+}

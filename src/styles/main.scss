@@ -3,8 +3,47 @@
 
 // Import your variables
 @import 'variables';
+@import "@fontsource/be-vietnam-pro"; // Defaults to weight 400
 
 body {
   margin: 0;
-  font-family: -apple-system, sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: $color-brand-white;
+  color: $color-brand-brown;
+}
+
+// --- Standard Global Layout Classes ---
+.page-container {
+    @extend %page-container;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 40px;
+
+    &__title {
+        color: $color-brand-brown;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        line-height: 1.2;
+    }
+
+    &__subtitle {
+        color: $color-brand-orange;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+// --- Common UI Patterns ---
+.content-card {
+    @extend %content-card;
+}
+
+.section-divider {
+    border-top: 2px solid $color-brand-white;
+    margin-top: 40px;
+    padding-top: 30px;
 }
